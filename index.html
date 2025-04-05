@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hati Berdenyut</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: heartbeat 1s infinite alternate;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+        }
+
+        @keyframes heartbeat {
+            from {
+                transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(-45deg) scale(1.1);
+            }
+        }
+
+        .text {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: red;
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .text p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body id="myBody">
+    <div class="heart" id="myHeart"></div>
+    <div class="text">
+        <p>Love You Shindy</p>
+        <p>- Sammy 2k25</p>
+    </div>
+    <script>
+        // File JavaScript dikosongkan karena tidak diperlukan untuk mengubah warna latar belakang.
+    </script>
+</body>
+</html>
